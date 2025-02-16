@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yukti Innovation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'hsl(215, 90%, 22%)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <nav class="bg-primary text-white h-24 flex items-center shadow-sm w-full">
+        <div class="w-full max-w-full flex items-center justify-between pl-0">
+            <!-- Logo and Brand Name -->
+            <a href="./index.html"
+                class="flex items-center gap-2 text-2xl font-bold text-white hover:text-white/80 transition-colors pl-0">
+                <div class="h-24 flex items-center pl-0">
+                    <img src="./assets/logo.jpeg" alt="Yukti Innovation Logo" class="h-full w-auto object-contain">
+                </div>
+                <span>Yukti Innovation</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center gap-6 pr-4">
+                <a href="./index.html" class="hover:text-white/80 px-4 py-2 transition-colors text-lg">Home</a>
+
+                <a href="./about.html" class="hover:text-white/80 px-4 py-2 transition-colors text-lg">About Us</a>
+
+                <a href="./contact.html" class="hover:text-white/80 px-4 py-2 transition-colors text-lg">Contact</a>
+
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden p-2 focus:outline-none" aria-label="Open mobile menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="md:hidden fixed top-0 right-0 h-full w-64 bg-primary z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+            <div class="flex flex-col p-4">
+                <!-- Close Button -->
+                <button id="close-menu" class="self-end p-2 focus:outline-none" aria-label="Close mobile menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+
+                <!-- Mobile Menu Links -->
+                <div class="flex flex-col gap-4 mt-8">
+                    <a href="./index.html"
+                        class="hover:bg-white/10 px-4 py-2 rounded transition-colors text-lg">Home</a>
+
+                    <a href="./about.html" class="hover:bg-white/10 px-4 py-2 rounded transition-colors text-lg">About
+                        Us</a>
+                    <a href="./contact.html"
+                        class="hover:bg-white/10 px-4 py-2 rounded transition-colors text-lg">Contact</a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-primary text-white py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    Professional Electrical & Robotics Solutions
+                </h1>
+                <p class="text-xl mb-8 text-white/90">
+                    Expert electrical services and innovative robotics solutions for your business needs.
+                </p>
+                <a href="contact.html"
+                    class="inline-block bg-white text-primary px-6 py-3 rounded font-semibold hover:bg-white/90">
+                    Get Started
+                    <span class="ml-2">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Service Cards -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <svg class="w-8 h-8 text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                    <h3 class="font-bold text-lg mb-2">Electrical Wiring</h3>
+                    <p class="text-gray-600">Professional electrical wiring services for commercial and industrial
+                        spaces.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <svg class="w-8 h-8 text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                        </path>
+                    </svg>
+                    <h3 class="font-bold text-lg mb-2">Illumination</h3>
+                    <p class="text-gray-600">Modern lighting solutions to enhance your workspace.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <svg class="w-8 h-8 text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                        </path>
+                    </svg>
+                    <h3 class="font-bold text-lg mb-2">Interior Solutions</h3>
+                    <p class="text-gray-600">Complete interior electrical infrastructure setup.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <svg class="w-8 h-8 text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z">
+                        </path>
+                    </svg>
+                    <h3 class="font-bold text-lg mb-2">Equipment Procurement</h3>
+                    <p class="text-gray-600">Source and supply of quality electrical and robotics equipment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-primary/10 py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Get Started?</h2>
+            <p class="text-xl text-gray-600 mb-8">
+                Contact us today for a consultation about your project.
+            </p>
+            <a href="contact.html"
+                class="inline-block bg-primary text-white px-6 py-3 rounded font-semibold hover:bg-primary/90">
+                Contact Us
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary/10 py-8 mt-auto">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Yukti Innovation</h3>
+                    <p class="text-gray-600">
+                        Professional electrical and robotics services for all your needs.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Services</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>Electrical Wiring</li>
+                        <li>Illumination</li>
+                        <li>Interior Solutions</li>
+                        <li>Equipment Procurement</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>Email: yuktiinnovation@gmail.com</li>
+                        <li>Phone: +977 9825340719</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-8 border-t text-center text-gray-600">
+                © <span id="current-year"></span> Yukti Innovation. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
